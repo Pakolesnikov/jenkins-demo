@@ -22,8 +22,14 @@ dependencies {
     implementation 'org.slf4j:slf4j-simple:2.0.9'
 }
 
+ext {
+    browser = project.hasProperty('browser') ? project.browser : 'chrome'
+}
+
 test {
     useJUnitPlatform()
+
+    systemProperty 'browser', browser
 
     jvmArgs = [
             '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
