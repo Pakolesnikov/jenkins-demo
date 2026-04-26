@@ -19,7 +19,7 @@ class CalculatorTest {
     @DisplayName("Test addition of two positive numbers")
     void testAddition() {
         int result = calculator.add(3, 5);
-        assertEquals(999, result, "3 + 5 should equal 8");
+        assertEquals(8, result, "3 + 5 should equal 8");
     }
 
     @Test
